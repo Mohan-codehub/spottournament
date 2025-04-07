@@ -1,120 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spot Tournament</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-        }
-        .location {
-            font-size: 14px;
-        }
-        .auth {
-            font-size: 14px;
-        }
-        .auth a {
-            color: white;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-        .auth a:hover {
-            text-decoration: underline;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <script>
-        // Replace 'YOUR_API_KEY' with your actual OpenCage API key
-        const apiKey = '45be57a37e244b7690a886d4babf001c';
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-        function showPosition(position) {
-            let lat = position.coords.latitude;
-            let lon = position.coords.longitude;
-            document.getElementById("location").innerHTML = "📍 Detecting location...";
-
-            // Make API call to OpenCage Geocoder
-            fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat},${lon}&key=${apiKey}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.results.length > 0) {
-                        let location = data.results[0].formatted;
-                        document.getElementById("location").innerHTML = `📍 ${location}`;
-                    } else {
-                        document.getElementById("location").innerHTML = "Location not found.";
-                    }
-                })
-                .catch(error => {
-                    document.getElementById("location").innerHTML = "Error fetching location.";
-                    console.error('Error:', error);
-                });
-        }
-
-        function showError(error) {
-            switch (error.code) {
-                case error.PERMISSION_DENIED:
-                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    document.getElementById("location").innerHTML = "Location information is unavailable.";
-                    break;
-                case error.TIMEOUT:
-                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
-                    break;
-                case error.UNKNOWN_ERROR:
-                    document.getElementById("location").innerHTML = "An unknown error occurred.";
-                    break;
-            }
-        }
-    </script>
-</head>
-<body onload="getLocation()">
-    <header>
-        <div class="location" id="location">📍 Detecting location...</div>
-        <div class="auth">
-            <a href="#">Login</a> / <a href="#">Register</a>
-        </div>
-    </header>
-    <main>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Virat_Kohli.jpg" alt="Virat Kohli">
-    </main>
-    <footer>
-        spottournament
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpotTournament - Your Tournament Destination</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
