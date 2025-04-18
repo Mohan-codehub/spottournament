@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sports News Site - Similar to The Bridge</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- You can use an <img> tag here instead -->
+                    <h1>YOUR LOGO</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Olympics</a></li>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Badminton</a></li>
+                    <li><a href="#">More <i class="fas fa-caret-down"></i></a>
+                        <!-- Basic Dropdown Example (Needs CSS/JS for interaction) -->
+                       <!-- <ul class="dropdown">
+                            <li><a href="#">Hockey</a></li>
+                            <li><a href="#">Kabaddi</a></li>
+                            <li><a href="#">Tennis</a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                 <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="search-icon">
+                    <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                </div>
+                <!-- Add a simple menu toggle for mobile -->
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container content-area">
+
+        <!-- Featured Article Section -->
+        <section class="featured-story">
+            <article>
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400?text=Featured+Story+Image" alt="Featured Story">
+                    <div class="story-content">
+                        <span class="category-tag">Olympics</span>
+                        <h2>Major Breakthrough in Olympic Qualifiers for Indian Athletes</h2>
+                        <p>A detailed look into the recent performances and what it means for Paris 2024...</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+
+        <!-- Latest Articles Grid -->
+        <section class="latest-articles">
+            <h2>Latest News</h2>
+            <div class="articles-grid">
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200?text=Article+1" alt="Article 1">
+                        <div class="card-content">
+                            <span class="category-tag">Football</span>
+                            <h3>Local Club Secures Victory in Dramatic Final Minutes</h3>
+                            <p class="excerpt">An unexpected goal turned the tables in the championship match...</p>
+                            <span class="meta">By Jane Doe | July 25, 2023</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200?text=Article+2" alt="Article 2">
+                        <div class="card-content">
+                            <span class="category-tag">Cricket</span>
+                            <h3>Star Player Announces Retirement After Long Career</h3>
+                             <p class="excerpt">Reflecting on the highs and lows of a legendary journey in cricket...</p>
+                           <span class="meta">By John Smith | July 24, 2023</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200?text=Article+3" alt="Article 3">
+                        <div class="card-content">
+                            <span class="category-tag">Badminton</span>
+                            <h3>Young Talent Shines at National Badminton Tournament</h3>
+                             <p class="excerpt">A rising star makes waves with impressive skills and determination...</p>
+                           <span class="meta">By Alice Green | July 23, 2023</span>
+                        </div>
+                    </a>
+                </article>
+
+                 <article class="news-card">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200?text=Article+4" alt="Article 4">
+                        <div class="card-content">
+                            <span class="category-tag">Hockey</span>
+                            <h3>National Hockey Team Prepares for International Series</h3>
+                             <p class="excerpt">Intensive training camps are underway as the team eyes global success...</p>
+                           <span class="meta">By Bob White | July 22, 2023</span>
+                        </div>
+                    </a>
+                </article>
+                 <!-- Add more <article> blocks as needed -->
+            </div>
+        </section>
+
+        <!-- Optional: Sidebar Section -->
+        <!-- <aside class="sidebar">
+            <h3>Trending Now</h3>
+             <ul>...</ul>
+            <h3>Follow Us</h3>
+             <div class="social-icons">...</div>
+        </aside> -->
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                     <h4>Follow Us</h4>
+                     <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <h4>About</h4>
+                    <p>Your brief description about the website goes here. Focusing on sports news and updates.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Your Website Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: Link to JavaScript file -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>

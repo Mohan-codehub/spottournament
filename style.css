@@ -1,0 +1,398 @@
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light background */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: #ffffff; /* White header background */
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    color: #0056b3; /* Example primary color */
+    margin: 0;
+}
+/* If using an image logo:
+.logo img { height: 40px; width: auto; }
+*/
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    font-weight: 600;
+    color: #555;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #0056b3;
+}
+
+.main-nav a::after { /* Simple underline hover effect */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #0056b3;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #0056b3;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    font-size: 1.1em;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+     color: #0056b3;
+}
+
+.search-icon a {
+     margin-left: 20px;
+     font-size: 1.2em;
+     color: #555;
+     transition: color 0.3s ease;
+}
+.search-icon a:hover {
+     color: #0056b3;
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #333;
+}
+
+/* --- Main Content Area --- */
+.content-area {
+    padding: 30px 0;
+}
+
+/* Featured Story */
+.featured-story article {
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; /* Ensure image corners are rounded if needed */
+}
+.featured-story a {
+    display: block; /* Make the whole area clickable */
+}
+
+.featured-story img {
+    width: 100%;
+    /* Optional: fixed height for consistency
+    height: 400px;
+    object-fit: cover; */
+}
+
+.featured-story .story-content {
+    padding: 20px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.featured-story h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.featured-story p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+/* Latest Articles */
+.latest-articles h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.news-card a {
+     display: block;
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for cards */
+    object-fit: cover; /* Crop image nicely */
+}
+
+.news-card .card-content {
+    padding: 15px;
+}
+
+.news-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.news-card .excerpt {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+     /* Limit excerpt lines (optional, requires careful handling) */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+}
+
+.news-card .meta {
+    font-size: 0.8em;
+    color: #888;
+}
+
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #222; /* Dark footer */
+    color: #ccc;
+    padding: 40px 0 20px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.site-footer h4 {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-nav ul li {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+.footer-social .social-icons a {
+    font-size: 1.3em;
+    color: #ccc;
+    margin-right: 15px; /* Use margin-right here instead of left */
+    transition: color 0.3s ease;
+}
+.footer-social .social-icons a:last-child {
+    margin-right: 0;
+}
+
+.footer-social .social-icons a:hover {
+    color: #007bff; /* Use a different hover color if desired */
+}
+
+.footer-info p {
+    font-size: 0.9em;
+    line-height: 1.7;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-wrap: wrap; /* Allow items to wrap */
+        position: relative; /* Needed for absolute positioning of nav */
+    }
+
+    .logo {
+        flex-basis: 80%; /* Take most width on mobile */
+    }
+
+    .header-right {
+        flex-basis: 20%;
+        justify-content: flex-end;
+    }
+    .header-right .social-icons,
+    .header-right .search-icon {
+        display: none; /* Hide these in the mobile header, maybe move to menu */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .main-nav {
+        display: none; /* Hide the main nav by default on mobile */
+        /* Add JS to toggle 'display: block' or a class */
+        flex-basis: 100%; /* Take full width when shown */
+        order: 3; /* Place it below logo and icons */
+        background-color: #fff;
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+    }
+    .main-nav ul {
+        flex-direction: column; /* Stack nav items */
+    }
+    .main-nav li {
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+     .main-nav li:last-child {
+        border-bottom: none;
+    }
+    .main-nav a {
+        display: block; /* Make links take full width */
+        padding: 15px;
+    }
+    .main-nav a::after {
+       display: none; /* Hide underline effect on mobile nav */
+    }
+
+    /* JS Needed: Add a class 'nav-active' to .main-nav when toggle is clicked */
+    /* .main-nav.nav-active { display: block; } */
+
+
+    .featured-story h2 {
+        font-size: 1.6em;
+    }
+     .featured-story p {
+        font-size: 1em;
+    }
+
+    .articles-grid {
+         grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+     .footer-content {
+        grid-template-columns: 1fr; /* Stack footer sections */
+        text-align: center;
+    }
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+     .footer-social .social-icons a {
+        margin: 0 10px;
+    }
+
+}
